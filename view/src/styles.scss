@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+// substituir variáveis Boostrap
+@import "scss/bootstrap-variables";
+
+// importar arquivos Bootstrap de origem
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// importar estilos principais
+@import "scss/coreui-io/core";
+
+// estilos personalizados
+@import "scss/custom";

@@ -1,0 +1,5 @@
+Documentos para gestão de projetos
+https://blog.runrun.it/8-documentos-essenciais-para-o-controle-de-projetos/
+
+Técnicas para importação e exportação de módulos em TS
+http://2ality.com/2014/09/es6-modules-final.html

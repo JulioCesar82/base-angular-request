@@ -1,0 +1,52 @@
+<div class="app flex-row align-items-center fundo-login">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-8">
+
+                <div class="card-group">
+                    <div class="card text-white bg-primary py-5 d-md-down-none">
+                        <div class="card-body text-center">
+                            <div>
+                              <h1>Mais segurança para você</h1>
+
+                              <p>A legislação determina que após a emissão, o contribuinte deverá se certificar de que a cópia de segurança do arquivo digital será conservada pelo prazo de 5 anos e mais o ano corrente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-4">
+                        <app-alert></app-alert>
+
+                        <div class="card-body">
+                            <h2 class="text-center">Orpak 360</h2>
+                             <p>Preencha os dados de acesso</p>
+
+                            <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="icon-user"></i></span>
+                                    </div>
+                                    <input id="username" type="text" class="form-control" placeholder="Seu username (admin@orpak.com)"
+                                        formControlName="username" [ngClass]="{'is-invalid': form.controls['username'].touched && !form.controls['username'].valid}">
+                                    <div class="invalid-feedback">O campo Username é obrigatório e deve conter de 4 a 50 caracteres</div>
+                                </div>
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="icon-lock"></i></span>
+                                    </div>
+                                    <input id="password" type="password" class="form-control" placeholder="Seu password (12345)"
+                                        formControlName="password" [ngClass]="{'is-invalid': form.controls['password'].touched && !form.controls['password'].valid}">
+                                    <div class="invalid-feedback">O campo Senha é obrigatório e deve conter de 4 a 50 caracteres</div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block"  
+                                [ladda]="isLoading" [disabled]="!form.valid">Entrar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+{
+    "name": "default",
+    "type": "sqlite",
+    "database": "./src/database/orpak.db",
+    "synchronize": true,
+    "logging": false,
+    "entities": [
+        "./src/app/*.js"
+    ],
+    "migrations": [
+        "./src/database/migrations/*.js"
+    ],
+    "cli": {
+        "entitiesDir": "./src/app",
+        "migrationsDir": "./src/database/migrations",
+        "subscribersDir": "./src/database/subscribers"
+    }
+}

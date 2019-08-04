@@ -1,0 +1,21 @@
+<header class="app-header navbar">
+    <button class="navbar-toggler d-lg-none" type="button" appSidebarTogglerMobile>
+      <span class="icon-menu"></span>
+    </button>
+
+    <a class="navbar-brand" href="#"></a>
+
+    <button class="navbar-toggler d-md-down-none mr-auto" type="button" appSidebarToggler>
+      <span class="icon-menu"></span>
+    </button>
+
+    <ul class="nav navbar-nav ml-auto" ng-If="user.firstname">
+        <li class="nav-item d-md-down-none">
+            <i class="icon-user"></i> {{ user.firstname }}
+        </li>
+
+        <button class="navbar-toggler" type="button" (click)="sair()">
+          <i class="fa fa-sign-out fa-1x" aria-hidden="true"></i>
+        </button>
+    </ul>
+</header>

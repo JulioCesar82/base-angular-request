@@ -1,0 +1,37 @@
+{
+    "name": "project-node",
+    "description": "project in node",
+    "license": "Copyright by Orpak",
+    "scripts": {
+        "build": "tsc",
+        "lint": "tslint ./src/**/*.ts",
+        "format": "tsfmt -r",
+        "start": "nodemon -x ts-node src/server.ts",
+        "generate-doc": "typedoc --options ./config/typedoc.json ./src/server.ts",
+        "generate-doc-api": "swaggerGen -c ./config/swagger.json",
+        "db-migrate": "ts-node typeorm migrations:run"
+    },
+    "dependencies": {
+        "@types/cors": "^2.8.3",
+        "bcrypt": "^2.0.1",
+        "body-parser": "^1.18.2",
+        "cors": "^2.8.4",
+        "dotenv": "^5.0.1",
+        "jsonwebtoken": "^8.2.1",
+        "moment": "^2.22.2",
+        "reflect-metadata": "^0.1.12",
+        "sqlite3": "^4.0.0",
+        "typeorm": "^0.1.20",
+        "typescript-rest": "^1.5.2",
+        "winston": "^3.0.0-rc4"
+    },
+    "devDependencies": {
+        "nodemon": "^1.17.3",
+        "swagger-ui-express": "^3.0.8",
+        "swagger-ui-themes": "^3.0.0",
+        "ts-node": "^5.0.1",
+        "typedoc": "^0.11.1",
+        "typescript": "^2.8.1",
+        "typescript-rest-swagger": "0.0.17"
+    }
+}

@@ -1,0 +1,6 @@
+<div *ngIf="mensagem" [ngClass]="{
+'alert': mensagem,
+'alert-success': mensagem.estadoAlerta >= 200 && mensagem.estadoAlerta <= 210,
+'alert-info': mensagem.estadoAlerta >= 400 && mensagem.estadoAlerta <= 410,
+'alert-danger': mensagem.estadoAlerta >= 500 && mensagem.estadoAlerta <= 510
+}">{{ mensagem.texto }}</div>

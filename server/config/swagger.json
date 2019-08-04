@@ -1,0 +1,20 @@
+{
+    "swagger": {
+        "basePath": "/api",
+        "outputDirectory": "./documentation-api",
+        "entryFile": "./config/imports-swagger.ts",
+        "produces": "text/json",
+        "version": "1.0",
+        "name": "project-node",
+        "description": "Project in node",
+        "securityDefinitions": {
+            "BearerAuth": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "authorization",
+                "description": "",
+                "value": "Bearer <JWT>"
+            }
+        }
+    }
+}
